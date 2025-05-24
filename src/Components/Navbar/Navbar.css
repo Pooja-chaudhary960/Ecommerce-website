@@ -1,0 +1,132 @@
+.nav-toggle {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 12px;
+  color: black;
+}
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    box-shadow: 0 1px 3px -2px black;
+
+}
+
+.nav-logo{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.nav-logo p{
+    color: black;
+    font-size: 25px;
+    font-weight: 600;
+
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:3px;
+    cursor: pointer;
+}
+.nav-menu hr{
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: red;
+}
+.nav-login-cart{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+.nav-login-cart button{
+    width: 140px;
+    height: 40px;
+    outline: none;
+    border: 1px solid gray ;
+    border-radius: 75px;
+    color: gray;
+    font-size:16px;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+}
+.nav-login-cart button:active{
+    background: white;
+}
+.nav-cart-count{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: -55px;
+    border-radius: 14px;
+    background: red;
+    color: white;
+}
+@media (max-width: 768px) {
+  /* Stack navbar vertically and center items */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 16px;
+  }
+
+  /* Center logo text and reduce gap */
+  .nav-logo {
+    gap: 6px;
+  }
+  .nav-logo p {
+    font-size: 20px;
+  }
+
+ @media (max-width: 768px) {
+  .nav-toggle {
+    display: block; /* Show toggle on mobile */
+  }
+  
+  .nav-menu {
+    display: none; /* Hide menu by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    background: white;
+    position: absolute;
+    top: 80px; /* Below navbar */
+    left: 0;
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    z-index: 10;
+  }
+
+  .nav-menu.open {
+    display: flex; /* Show menu when toggled */
+  }
+
+  /* Optionally adjust nav-login-cart on mobile */
+  .nav-login-cart {
+    gap: 15px;
+  }
+ }
